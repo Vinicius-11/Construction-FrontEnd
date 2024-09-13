@@ -1,8 +1,15 @@
-function Painel () {
+import "./Painel.css";
+
+function Painel (props) {
     return (
         <article>
-            <h3></h3>
-            <ul></ul>
+            <h3>{props.texto}</h3>
+            <ul>
+                {props.itens.map((item, index) => 
+                    <li key={index}>{item}
+                    </li>
+                )}
+            </ul>
         </article>
     );
 }

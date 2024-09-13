@@ -1,7 +1,10 @@
-function Secao () {
+import "./Secao.css";
+
+function Secao (props) {
     return (
         <section>
-            <h2></h2>
+            <h2>{props.texto}</h2>
+            {props.children}
         </section>
     );
 }

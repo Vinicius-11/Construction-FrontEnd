@@ -1,6 +1,8 @@
-function Conteudo () {
+import "./Conteudo.css";
+
+function Conteudo (props) {
     return (
-        <main></main>
+        <main className={props.estilo}>{props.children}</main>
     );
 }
 

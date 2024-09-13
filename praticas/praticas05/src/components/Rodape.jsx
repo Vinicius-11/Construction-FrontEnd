@@ -1,7 +1,11 @@
-function Rodape () {
+import "./Rodape.css";
+
+function Rodape (props) {
     return (
-        <footer><p></p></footer>
+        <footer>
+            <p>{props.texto}</p>
+        </footer>
     );
 }
 
-export default Secao;
+export default Rodape;
