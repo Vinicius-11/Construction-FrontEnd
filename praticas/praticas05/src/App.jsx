@@ -3,7 +3,7 @@ import Login from "./pages/Login";
 import Perfil from "./pages/Perfil";
 
 function App () {
-  const index = 1
+  const index = 3
 
   return (
     <>
@@ -14,4 +14,4 @@ function App () {
   );
 }
 
-export default App;
+export default App; 
