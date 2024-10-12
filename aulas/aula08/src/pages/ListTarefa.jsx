@@ -1,18 +1,23 @@
-// Consumir o contexto = contexto TarefaContext
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { TarefaContext } from "../contexts/TarefaContext";
 
 function ListTarefa() {
-    const { tarefas, remover } = useContext(TarefaContext);
+  const { tarefas, remover, carregar } = useContext(TarefaContext);
 
-    return (
-        <ul>
-            {tarefas.map((item, index) => 
-                (<li key={index}>{item} 
-                    <button onClick={() => remover(item)}>Remover</button>
-                </li>))}
-        </ul>
-    );
+  useEffect(() => {
+    carregar();
+  }, []);
+
+  return (
+    <ul>
+      {tarefas.map((item, index) => (
+        <li key={index}>
+          {item.tarefa}
+          <button onClick={() => remover(item)}>Remover</button>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default ListTarefa;
